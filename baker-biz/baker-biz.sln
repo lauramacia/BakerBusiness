@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "baker-biz", "baker-biz.csproj", "{CEC31AC2-1709-46E8-AC98-AE526C8F9DEF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "baker-bizTests", "..\baker-bizTests1\baker-bizTests.csproj", "{C28E2C73-05ED-4F76-99FD-3B69E0CFD7DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "baker-bizTests", "..\baker-bizTests\baker-bizTests.csproj", "{C28E2C73-05ED-4F76-99FD-3B69E0CFD7DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
