@@ -39,6 +39,14 @@ namespace baker_biz.BakeryItems
             }
         }
 
+        public void UpdateInventoryQuantitiesFromMap(Dictionary<string, double> quants)
+        {
+            foreach (string ingredient in quants.Keys)
+            {
+                ingredientQuantities[ingredient] = quants[ingredient];
+            }
+        }
+
         public void Print(List<Ingredient> ingredients)
         {
             foreach (Ingredient ingredient in ingredients)

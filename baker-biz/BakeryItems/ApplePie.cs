@@ -16,7 +16,6 @@ namespace baker_biz
         private readonly Butter butter = new(0.75);
         private readonly Inventory availableInventory = new();
         private readonly List<Ingredient> recipeIngredients = new();
-
         private int maxAllIngredients;
         private int maxNoOptional;
         
@@ -29,6 +28,22 @@ namespace baker_biz
             };
 
             availableInventory.CreateEmptyInventory(recipeIngredients);
+        }
+
+        public int MaxAllIngredients
+        {
+            get
+            {
+                return maxAllIngredients;
+            }            
+        }
+
+        public int MaxNoOptional
+        {
+            get
+            {
+                return maxNoOptional;
+            }
         }
 
         public Inventory AvailableInventory
@@ -60,11 +75,11 @@ namespace baker_biz
             if (withOptional)
             {
                 maxAllIngredients = MaxApplePies(withOptional);
-                CalculateApplePieLeftovers(maxAllIngredients, withOptional);
+                CalculateApplePieLeftovers(MaxAllIngredients, withOptional);
             }
 
             maxNoOptional = MaxApplePies();            
-            CalculateApplePieLeftovers(maxNoOptional);
+            CalculateApplePieLeftovers(MaxNoOptional);
 
             return;
         }

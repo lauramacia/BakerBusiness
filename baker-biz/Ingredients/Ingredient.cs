@@ -8,6 +8,12 @@ namespace baker_biz
 {    
     public class Ingredient
     {
+        public const string Apple = "apple";
+        public const string Sugar = "sugar";
+        public const string Flour = "flour";
+        public const string Cinnamon = "cinnamon";
+        public const string Butter = "butter";
+
         private readonly String name;
         private readonly String measure;
         private double requiredAmount;
@@ -51,7 +57,7 @@ namespace baker_biz
     public class Apple : Ingredient
     {
         public Apple(double requiredAmount, bool isOptional = false)
-            : base("apple", "")
+            : base(Apple, "")
         {
             this.RequiredAmount = requiredAmount;
             this.IsOptional = isOptional;
@@ -72,7 +78,7 @@ namespace baker_biz
     public class Sugar : Ingredient
     {
         public Sugar(double requiredAmount, bool isOptional = false)
-            : base("sugar", "pound(s) (lbs)")
+            : base(Sugar, "pound(s) (lbs)")
         {
             this.RequiredAmount = requiredAmount;
             this.IsOptional = isOptional;
@@ -82,7 +88,7 @@ namespace baker_biz
     public class Flour : Ingredient
     {
         public Flour(double requiredAmount, bool isOptional = false)
-            : base("flour", "pound(s) (lbs)")
+            : base(Flour, "pound(s) (lbs)")
         {
             this.RequiredAmount = requiredAmount;
             this.IsOptional = isOptional;
@@ -92,7 +98,7 @@ namespace baker_biz
     public class Cinnamon : Ingredient
     {
         public Cinnamon(double requiredAmount, bool isOptional = false)
-            : base("cinnamon", "teaspoon(s) (tsp)")
+            : base(Cinnamon, "teaspoon(s) (tsp)")
         {
             this.RequiredAmount = requiredAmount;
             this.IsOptional = isOptional;
@@ -102,7 +108,7 @@ namespace baker_biz
     public class Butter : Ingredient
     {
         public Butter(double requiredAmount, bool isOptional = false)
-            : base("butter", "stick(s)")
+            : base(Butter, "stick(s)")
         {
             this.RequiredAmount = requiredAmount;
             this.IsOptional = isOptional;
